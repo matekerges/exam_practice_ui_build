@@ -1,6 +1,6 @@
 /* COLORS */
 
-:root{
+:root {
     --primary-color: #ffeedf;
     --secondary-color: #145434
 }
@@ -9,14 +9,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
 
-body{
+body {
     background-color: var(--primary-color);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
-    #root{
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    #root {
         font-family: 'Space Grotesk', sans-serif;
     }
-    
-    header{
+
+    header {
         height: 60px;
         width: 100%;
         background-color: var(--primary-color);
@@ -29,14 +35,16 @@ body{
         top: 0;
         z-index: 10;
 
-    .logo, .material-icons{
-        font-weight: bold;
-        font-size: 36px;
-        margin: 0 20px;
+        .logo,
+        .material-icons {
+            font-weight: bold;
+            font-size: 36px;
+            margin: 0 20px;
 
         }
     }
-    .card-container{
+
+    .card-container {
         max-width: 1200px;
         margin: 60px auto;
         padding: 0 40px;
@@ -45,13 +53,13 @@ body{
         justify-content: center;
         gap: 60px;
 
-        .card{
+        .card {
             background-color: var(--secondary-color);
             height: 250px;
             width: 400px;
             position: relative;
 
-            .count{
+            .count {
                 height: 40px;
                 width: 40px;
                 font-size: 24px;
@@ -66,27 +74,36 @@ body{
                 top: -20px;
                 left: -20px;
             }
-            .title, .sub, .text{
+
+            .title,
+            .sub,
+            .text {
                 color: var(--primary-color);
                 margin: 0 40px;
             }
-            .title{
+
+            .title {
                 font-size: 36px;
                 margin: 40px 40px 0 40px;
                 padding-bottom: 60px;
                 border-bottom: 1px solid var(--primary-color)
             }
-            .sub, .text{
+
+            .sub,
+            .text {
                 font-size: 18px;
             }
-            .sub{
-                margin-top: 5%;    
+
+            .sub {
+                margin-top: 5%;
             }
-            .text{
+
+            .text {
                 font-weight: bold;
                 margin-top: 8px;
             }
-            .details{
+
+            .details {
                 height: 50px;
                 width: 200px;
                 font-size: 14px;
@@ -99,19 +116,20 @@ body{
                 padding: 0;
                 margin: 0;
                 letter-spacing: 1px;
+                cursor: pointer;
 
                 .material-symbols-outlined {
                     font-size: 36px;
                     position: absolute;
                     bottom: calc(10%);
                     right: calc(5%);
-                  }
+                }
 
-                  &:hover{
+                &:hover {
                     background-color: var(--secondary-color);
                     color: var(--primary-color);
                     border: 2px solid var(--primary-color);
-                  }
+                }
             }
         }
     }
