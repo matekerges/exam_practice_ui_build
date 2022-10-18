@@ -19,11 +19,15 @@ body{
     header{
         height: 60px;
         width: 100%;
+        background-color: var(--primary-color);
         border-bottom: 1px solid var(--secondary-color);
         color: var(--secondary-color);
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
 
     .logo, .material-icons{
         font-weight: bold;
